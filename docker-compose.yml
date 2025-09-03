@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=lalin-cek
+      - POSTGRES_PASSWORD=yoursecurepassword
+      - POSTGRES_DB=lalin-cek-db
+    ports:
+      - '0.0.0.0:5433:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  postgres_data:

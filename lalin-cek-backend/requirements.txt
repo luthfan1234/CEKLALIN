@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+sqlalchemy[asyncio]
+asyncpg
+pydantic
+opencv-python
+ultralytics
+boxmot
+twilio
+python-dotenv
+numpy
